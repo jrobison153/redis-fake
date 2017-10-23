@@ -1,0 +1,44 @@
+{
+  "name": "redis-fake",
+  "version": "1.0.0",
+  "description": "A fake (test double fake) redis client",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src -d build && npm run docs",
+    "commit": "npm run lint && npm run test",
+    "docs": "./node_modules/.bin/jsdoc ./src --destination ./docs/api",
+    "lint": "node ./node_modules/eslint/bin/eslint ./src/**/*.js ./test/**/*.js",
+    "test": "npm run test:unit",
+    "test:unit": "mocha --require babel-register --require babel-polyfill test/**/*.js",
+    "test:unit:watch": "mocha --watch --require babel-register --require babel-polyfill test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrobison153/redis-fake.git"
+  },
+  "keywords": [
+    "redis",
+    "fake"
+  ],
+  "author": "Justin Robison",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jrobison153/redis-fake/issues"
+  },
+  "homepage": "https://github.com/jrobison153/redis-fake#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^3.4.2"
+  }
+}
