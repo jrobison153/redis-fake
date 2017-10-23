@@ -30,4 +30,4 @@ You can also take a look at the unit tests for more examples of usage.
 
 The following functionality has been faked, admittedly there isn't much yet. Pretty much just enough to support my own testing so far. I will continue to build out more support as I needed, feel free to contribute.
 
-[API Docs](./docs/api/index.html)
+[API Docs](https://jrobison153.github.io/redis-fake/index.html)
