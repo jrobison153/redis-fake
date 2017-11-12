@@ -1,6 +1,6 @@
 {
   "name": "redis-fake",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A fake (test double fake) redis client",
   "main": "build/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "docs": "npm run docs:clean && ./node_modules/.bin/jsdoc ./src --destination ./docs",
     "docs:clean": "./node_modules/.bin/rimraf docs",
     "lint": "node ./node_modules/eslint/bin/eslint ./src/**/*.js ./test/**/*.js",
-    "release:minor": "npm run test && npm run build && npm version minor && npm publish",
+    "release:minor": "npm run test && npm run build && npm version minor --force && npm publish",
     "test": "npm run test:unit",
     "test:unit": "mocha --require babel-register --require babel-polyfill test/**/*.js",
     "test:unit:watch": "mocha --watch --require babel-register --require babel-polyfill test/**/*.js"
