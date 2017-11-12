@@ -10,6 +10,7 @@
     "docs:clean": "./node_modules/.bin/rimraf docs",
     "lint": "node ./node_modules/eslint/bin/eslint ./src/**/*.js ./test/**/*.js",
     "release:minor": "npm run test && npm run build && npm version minor && npm publish",
+    "release:major": "npm run test && npm run build && npm version major && npm publish",
     "test": "npm run test:unit",
     "test:unit": "mocha --require babel-register --require babel-polyfill test/**/*.js",
     "test:unit:watch": "mocha --watch --require babel-register --require babel-polyfill test/**/*.js"
