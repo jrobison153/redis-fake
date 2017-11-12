@@ -1,6 +1,6 @@
 {
   "name": "redis-fake",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A fake (test double fake) redis client",
   "main": "build/index.js",
   "scripts": {
