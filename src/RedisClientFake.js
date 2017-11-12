@@ -1,7 +1,18 @@
 export default class RedisClientFake {
 
-  constructor() {
+  /**
+   * initialize the fake, parameters are spyed by the fake so they can be reviewed later. Doesn't actually
+   * do anything with the port/host/options other than spy/record them.
+   *
+   * @param port
+   * @param host
+   * @param options
+   */
+  constructor(port, host, options) {
 
+    this.port = port;
+    this.host = host;
+    this.options = options;
     this.channelsSubscribedTo = [];
   }
 
