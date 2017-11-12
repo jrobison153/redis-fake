@@ -6,40 +6,12 @@ describe('Redis Client Fake Test', () => {
 
   let redisClient;
 
-  describe('when constructed', () => {
+  beforeEach(() => {
 
-    const options = {
-      a: 'foo',
-      b: () => {},
-    };
-
-    beforeEach(() => {
-
-      redisClient = new RedisClient(1234, 'some host', options);
-    });
-
-    it('spys the provided port', () => {
-
-      expect(redisClient.port).to.equal(1234);
-    });
-
-    it('spys the provided host', () => {
-
-      expect(redisClient.host).to.equal('some host');
-    });
-
-    it('spys the provided options', () => {
-
-      expect(redisClient.options).to.deep.equal(options);
-    });
+    redisClient = new RedisClient();
   });
 
   describe('when subscribed to a topic', () => {
-
-    beforeEach(() => {
-
-      redisClient = new RedisClient();
-    });
 
     describe('and an event handler is registered for messages', () => {
 
@@ -105,11 +77,6 @@ describe('Redis Client Fake Test', () => {
   });
 
   describe('when not subscribed to a topic', () => {
-
-    beforeEach(() => {
-
-      redisClient = new RedisClient();
-    });
 
     describe('and an event handler is registered for messages', () => {
 
